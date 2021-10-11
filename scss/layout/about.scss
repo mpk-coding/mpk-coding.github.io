@@ -1,0 +1,38 @@
+.about {
+  overflow: visible;
+  //
+  &__headingContainer {
+    grid-column: start / col-start 3;
+    padding: 0 3rem 3rem;
+    //
+  }
+  //
+  //
+  //
+  &__heading {
+    font-family: "Unica One", cursive;
+  }
+  //
+  &__text {
+    position: relative;
+    //
+    & p {
+      font-weight: 100;
+      position: relative;
+      //
+      &:not(:first-child) {
+        margin-top: 1.5rem;
+        //
+      }
+      //
+    }
+    //
+    & span {
+      display: inline-block;
+      margin-top: 1.5rem;
+      //
+    }
+    //
+  }
+  //
+}

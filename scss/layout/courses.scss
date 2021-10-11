@@ -1,0 +1,91 @@
+.courses {
+  overflow: visible;
+  z-index: 2;
+  //
+  position: relative;
+  //
+  align-content: flex-start;
+  //
+  min-height: unset;
+  //
+  //
+  &__container {
+    grid-column: start / end;
+    padding: 0 3rem;
+    //
+    position: relative;
+    z-index: 1;
+    //
+    height: 100%;
+    //
+    &::before {
+      content: "";
+      //
+      display: block;
+      //
+    }
+    //
+  }
+  //
+  &__headingContainer.container,
+  &__container {
+    padding: 0 3rem;
+    //
+  }
+  //
+  &__headingContainer {
+    grid-column: start / col-start 3;
+    //
+  }
+  //
+  //
+  //
+  &__heading {
+    //
+    & > * {
+      position: relative;
+      //
+      font-family: "Unica One", cursive;
+      //
+      display: inline-block;
+      padding-bottom: 2.25rem;
+      //
+    }
+    //
+  }
+  //
+  //
+  //
+  &__list {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    //
+    align-items: flex-start;
+    justify-content: flex-start;
+    //
+    //
+    //
+    & li {
+      display: flex;
+      width: 100%;
+      //
+      margin-left: -0.375em;
+      //
+    }
+    //
+    //
+    //
+    h2 {
+      //
+    }
+    //
+    h2:not(:first-child) {
+      margin-top: 6rem;
+      padding-bottom: 2.25rem;
+      //
+    }
+    //
+  }
+  //
+}

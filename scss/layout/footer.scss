@@ -1,0 +1,125 @@
+.footer {
+  background: var(--dark);
+  font-weight: 400;
+  //
+  border-top: 1px solid currentColor;
+  //
+  @include grid;
+  //
+  align-items: flex-start;
+  text-align: start;
+  //
+  @include respond("portrait") {
+    justify-items: center;
+    text-align: center;
+    //
+  }
+  //
+  padding: 2rem 2rem 4rem;
+  //
+  color: inherit;
+  //
+  & > * {
+    text-decoration: none;
+    min-height: unset;
+    //
+  }
+  //
+  .copyright {
+    grid-column: start / col-end 1;
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+    //
+    span {
+      padding: calc(0.187em * 2) 0.375em 0.187em 0.375em;
+      //
+    }
+    //
+    &__date {
+      font-size: inherit;
+      color: var(--white);
+      padding: 0.25em 0;
+      border-radius: 2px;
+      //
+      white-space: nowrap;
+      //
+    }
+    //
+    & a {
+      display: inline-block;
+      //
+      font-size: 100%;
+      //
+    }
+    //
+    @include respond("portrait") {
+      grid-column: start / end;
+      //
+      flex-flow: column;
+      text-align: center;
+      justify-self: center;
+      //
+    }
+    //
+    //  asd
+    //
+  }
+  //
+  p,
+  .copyright,
+  .acreditation__link {
+    font-size: 2.1rem;
+    //
+  }
+  //
+  .acreditation__container {
+    margin-left: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    //
+    grid-column: col-start 3 / end;
+    //
+    width: 100%;
+    //
+    @include respond("portrait") {
+      flex: 0 0 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 2rem auto 0;
+      //
+      grid-column: start / end;
+      //
+    }
+    //
+  }
+  //
+  .acreditation__caption {
+    flex: 0 0 100%;
+    text-align: end;
+    border-bottom: 1px solid var(--secondary);
+    //
+    padding: 0.187em 0.375em;
+    //
+    @include respond("portait") {
+      text-align: center;
+      //
+    }
+    //
+  }
+  //
+  p,
+  .acreditation__link {
+    display: block;
+    //
+  }
+  //
+  .acreditation__link {
+    margin-top: 0.5em;
+    //
+  }
+  //
+}

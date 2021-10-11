@@ -1,0 +1,80 @@
+.links {
+  //background-image: url("../img/vaporWave.svg");
+  //
+  align-content: stretch;
+  align-items: center;
+  justify-content: center;
+  //
+  padding: 6rem 0 24rem;
+  //
+  .img__wrap {
+    grid-column: content-start / content-end;
+    width: 100%;
+    max-width: 50rem;
+    padding: 0 2rem;
+    //
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //
+    position: relative;
+    //
+  }
+  //
+  .img__container {
+    height: 0;
+    padding-top: 100%;
+    width: 100%;
+    //
+    position: relative;
+    //
+    & > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      //
+      object-fit: contain;
+      //
+    }
+    //
+  }
+  //
+}
+//
+.link__wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  //
+  width: 100%;
+  //
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  //
+}
+//
+a.myWork__link {
+  font-weight: 900;
+  font-size: 175%;
+  max-width: 100%;
+  background: var(--dark);
+  //
+  font-family: "Lobster Two";
+  //
+  padding: 0.187em 0.375em 0.187em 0.375em;
+  &:hover {
+    transform: translateX(0.375em);
+    //
+    border: none;
+    //
+    padding: 0.187em 0.375em 0.187em 0.375em;
+    //
+  }
+  //
+}

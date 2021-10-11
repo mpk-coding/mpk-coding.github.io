@@ -1,0 +1,96 @@
+.skills {
+  //
+  &__container {
+    //
+    padding: 3rem;
+    //
+  }
+  //
+  &__group {
+    --size: 0.5rem;
+    //
+    color: var(--white);
+    //
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+    //
+    & span {
+      text-align: end;
+      //
+      //
+      //
+      &:not(:first-child) {
+        margin-left: 2rem;
+        position: relative;
+        //
+        &::after {
+          //
+          display: none;
+          content: "";
+          position: absolute;
+          left: -1rem;
+          top: 50%;
+          transform: translate(-50%, calc(-50% - 0.1em));
+          width: var(--size);
+          height: var(--size);
+          border-radius: 50%;
+          background: currentColor;
+          //
+        }
+        //
+      }
+      //
+    }
+    //
+    @include respond("portrait") {
+      //
+      position: relative;
+      //
+      &:not(:first-child)::after {
+        //
+        display: none;
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -1rem;
+        transform: translate(-50%, calc(-50% - 0.1em));
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        background: var(--light);
+        //
+      }
+      //
+      & span {
+        flex: 0 0 100%;
+        //
+        &:not(:first-child) {
+          margin-left: 0;
+          margin-top: 1.5rem;
+          //
+          &::after {
+            left: 50%;
+            top: -1rem;
+            //
+            transform: translate(-50%, -50%);
+            //
+          }
+          //
+        }
+        //
+      }
+      //
+    }
+    //
+    &:not(:first-child) {
+      margin-top: 1.5rem;
+      //
+    }
+    //
+  }
+  //
+}
+//

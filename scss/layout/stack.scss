@@ -1,0 +1,202 @@
+.stack {
+  align-content: flex-start;
+  //
+  //
+  //
+  &__heading {
+    font-family: "Unica One", cursive;
+    //
+  }
+  //
+  .container {
+    grid-column: col-start 2 / end;
+    //
+    padding: 0 3rem;
+    //
+    &.skills__container {
+      grid-column: start / end;
+      grid-row: 2;
+      //
+      font-size: 100%;
+      //
+    }
+    //
+    &.stack__headingContainer {
+      padding-bottom: 3rem;
+      //
+      & .stack__heading {
+        white-space: nowrap;
+        //
+        color: var(--white);
+        //
+      }
+      //
+    }
+    //
+    &.stack__captionContainer {
+      margin-top: 3rem;
+      //
+      padding-top: 4rem;
+      //border-top: 1px solid var(--white);
+      //
+    }
+    //
+  }
+  //
+  //
+  //
+}
+//
+.skills {
+  &__content,
+  &__content tr,
+  &__content th {
+    width: 100%;
+    //
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    //
+    th,
+    td {
+      padding: 0;
+      //
+      &:not(:first-child) {
+        margin-top: 1rem;
+        //
+      }
+      //
+      &.skills__description {
+        margin-top: 1rem;
+        //
+        line-height: 1.4;
+        word-break: break-word;
+        hyphens: auto;
+        //
+      }
+      //
+    }
+    //
+    //
+    //
+    thead,
+    tbody {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      //
+    }
+    //  3 col
+    thead tr,
+    tbody tr {
+      flex: 0 0 calc((100% - 2 * 2rem) / 3);
+      //
+      padding-top: 4rem;
+      //
+    }
+    //
+    thead tr,
+    tbody tr {
+      &:not(:nth-child(3n + 3)) {
+        margin-right: 2rem;
+        //
+      }
+      //
+    }
+    //
+    thead tr th:last-child {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--white);
+      //
+    }
+    //
+  }
+  //
+  &__content .skills__head tr {
+    padding: 0;
+    //
+  }
+  //
+  &__name {
+    font-weight: 600;
+    //
+  }
+  //
+  &__content {
+    @include respond("landscape") {
+      //  2 col
+      thead tr,
+      tbody tr {
+        flex: 0 0 calc((100% - 1 * 2rem) / 2);
+        //
+      }
+      //
+      thead tr,
+      tbody tr {
+        &:not(:nth-child(3n + 3)) {
+          margin-right: 0;
+          //
+        }
+        //
+        &:nth-child(2n + 1) {
+          margin-right: 2rem;
+          //
+        }
+        //
+      }
+      //
+    }
+    //
+    @include respond("phone") {
+      //  1 col
+      thead tr,
+      tbody tr {
+        flex: 0 0 100%;
+        //
+      }
+      //
+      thead tr,
+      tbody tr {
+        &:nth-child(2n + 1) {
+          margin-right: 0;
+          //
+        }
+        //
+      }
+      //
+    }
+    //
+  }
+  //
+}
+//
+.star,
+.skills__head .stars {
+  color: var(--light);
+  //
+}
+//
+.star {
+  display: inline-block;
+  font-size: inherit;
+  //
+  &--full {
+    &::after {
+      content: "\2605";
+      //
+    }
+    //
+  }
+  //
+  &--empty {
+    &::after {
+      content: "\2606";
+      //
+      color: var(--white);
+      opacity: 0.33;
+      //
+    }
+    //
+  }
+  //
+}
