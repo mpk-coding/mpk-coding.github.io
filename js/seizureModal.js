@@ -18,6 +18,8 @@ const seizureModal = () => {
         body.style.position = "static";
         body.style.overflow = "auto";
         //
+        modal.style.display = "none";
+        //
       }, 1000);
       //
     }
