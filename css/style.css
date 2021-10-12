@@ -340,7 +340,7 @@ Breakpoints in EM units.
   transition-timing-function: ease-out;
   transition-delay: 0s; }
   .fadeUp:link, .fadeUp:visited, .fadeUpa:link, .fadeUpa:visited, .fadeLeft:link, .fadeLeft:visited, .fadeLefta:link, .fadeLefta:visited, .fadeRight:link, .fadeRight:visited, .fadeRighta:link, .fadeRighta:visited {
-    transition-property: filter, left, right, transform, color, background, padding;
+    transition-property: filter, left, right, transform, color, background, padding;
     transition-duration: 0.5s, 0.5s, 0.5s, 0.2s; }
 
 .fadeUp {
@@ -381,6 +381,7 @@ html {
       font-size: calc(8 / 16 * 100%); } }
 
 body {
+  width: 100%;
   background-color: var(--dark);
   position: relative; }
 
@@ -795,6 +796,47 @@ a, a:link, a:visited {
   .background__video--hidden {
     opacity: 0;
     transition-duration: var(--transitionDuration); }
+
+.seizureModal, .seizureModal::after, .seizureModal--shown, .seizureModal--shown::after,
+.seizureModal * {
+  transition: all 1s ease-out; }
+
+.seizureModal *, .seizureModal::after {
+  opacity: 0; }
+
+.seizureModal--shown *, .seizureModal--shown::after {
+  opacity: 1; }
+
+.seizureModal::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 998; }
+
+.seizureModal .modal {
+  max-width: 30rem;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  transform: translate(-50%, -50%); }
+  .seizureModal .modal p {
+    padding: 2rem 0; }
+  .seizureModal .modal a,
+  .seizureModal .modal a:link,
+  .seizureModal .modal a:visited {
+    transform: translateX(-0.375em); }
+    .seizureModal .modal a:hover,
+    .seizureModal .modal a:link:hover,
+    .seizureModal .modal a:visited:hover {
+      transform: translateX(0); }
 
 .row {
   max-width: 114rem;

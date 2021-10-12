@@ -2,6 +2,8 @@ window.onload = function (event) {
   //
   console.log("index.js - Document loaded");
   //
+  seizureModal();
+  //
   if (window.scrollY != 0) {
     console.log("fl");
     //
@@ -97,26 +99,26 @@ function diagonalBeepers() {
   //
   while (moving) {
     if (counter == 0) {
-       putBeeper();
-       //
+      putBeeper();
+      //
     } else {
-       if (counter % 2 == 0) {
-          putBeeper();
-          //
-       }
-       //
+      if (counter % 2 == 0) {
+        putBeeper();
+        //
+      }
+      //
     }
     //
     //
     //
     if (frontIsClear()) {
-       move();
-       counter++;
-       //
+      move();
+      counter++;
+      //
     } else {
-       moving = false;
-       break;
-       //
+      moving = false;
+      break;
+      //
     }
     //
   }
